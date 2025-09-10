@@ -12,12 +12,18 @@
     color: white;
     text-decoration: none;
   }
+
+  nav a.active {
+    color: tomato;
+  }
 </style>
 
 <nav>
   <!-- Router Link
       https://angular.dev/api/router/RouterLink#
       When applied to an element in a template, makes that element a link that initiates navigation to a route. -->
-  <a routerLink="/">Home</a>
-  <a [routerLink]="['/hero']">Hero</a>
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    >Counter</a
+  >
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
 </nav>
