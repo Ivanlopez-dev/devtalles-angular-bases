@@ -1,0 +1,23 @@
+<!-- Basic styles -->
+<style>
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212121;
+    color: white;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+</style>
+
+<nav>
+  <!-- Router Link
+      https://angular.dev/api/router/RouterLink#
+      When applied to an element in a template, makes that element a link that initiates navigation to a route. -->
+  <a routerLink="/">Home</a>
+  <a [routerLink]="['/hero']">Hero</a>
+</nav>
