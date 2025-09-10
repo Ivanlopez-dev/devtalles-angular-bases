@@ -15,6 +15,7 @@
     <ul>
       @for (character of characters(); track character.id; let idx= $index) {
       <li>
+        @if (character.power > 1000) {
         <span>{{ idx + 1 }} - {{ character.name }}</span>
         <strong
           [class.text-danger]="character.power > 9000"
@@ -23,6 +24,10 @@
           <!-- [ngClass]="powerClasses()" -->
           ({{ character.power }})</strong
         >
+
+        } @else {
+        <p>Nothing here!</p>
+        }
       </li>
       }
     </ul>
